@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gallery.css">
+    <script src="https://kit.fontawesome.com/998571c6b3.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        @font-face {
+        font-display: block;
+        font-family: Roboto;
+        src: url(https://assets.sendinblue.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.sendinblue.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
+        }
+
+        @font-face {
+        font-display: fallback;
+        font-family: Roboto;
+        font-weight: 600;
+        src: url(https://assets.sendinblue.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.sendinblue.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
+        }
+
+        @font-face {
+        font-display: fallback;
+        font-family: Roboto;
+        font-weight: 700;
+        src: url(https://assets.sendinblue.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.sendinblue.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
+        }
+
+        #sib-container input:-ms-input-placeholder {
+        text-align: left;
+        font-family: "Helvetica", sans-serif;
+        color: #c0ccda;
+        }
+
+        #sib-container input::placeholder {
+        text-align: left;
+        font-family: "Helvetica", sans-serif;
+        color: #c0ccda;
+        }
+
+        #sib-container textarea::placeholder {
+        text-align: left;
+        font-family: "Helvetica", sans-serif;
+        color: #c0ccda;
+        }
+        
+        </style>
+        <style data-name="font-face_EditorialOld-Light">
+            @font-face {
+                font-family: "EditorialOld-Light";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPEditorialOld-LightItalic.woff?v=43892641468580326521678141322") format("truetype");
+            }
+        </style>
+        <style data-name="font-face_preview_acma-semibold">
+            @font-face {
+                font-family: "preview_acma-semibold";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPAcma-Semibold.woff?v=96950151476378755521674140888") format("woff");
+            }
+        </style>
+        <style data-name="font-face_preview_mori-Regular">
+            @font-face {
+                font-family: "preview_mori-Regular";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPMori-Regular.woff?v=67187122880011220361650291605") format("woff");
+            }
+        </style>
+        <style data-name="font-face_preview_right-didone-medium">
+            @font-face {
+                font-family: "preview_right-didone-medium";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PP%20Right%20Didone%20-%20Medium.woff?v=51078320478336269511668806927") format("woff");
+            }
+        </style>
+        <style data-name="font-face_preview_editorial-new-light">
+            @font-face {
+                font-family: "preview_editorial-new-light";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPEditorialOld-LightItalic.woff?v=43892641468580326521678141322") format("woff");
+            }
+        </style><style data-name="font-face_preview_right-serif-medium">
+            @font-face {
+                font-family: "preview_right-serif-medium";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PP%20Right%20Serif%20-%20Medium.woff?v=64606545584787087001668806753") format("woff");
+            }
+        </style><style data-name="font-face_preview_acma-semibold">
+            @font-face {
+                font-family: "preview_acma-semibold";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPAcma-Semibold.woff?v=96950151476378755521674140888") format("woff");
+            }
+        </style><style data-name="font-face_preview_neue-machina-collection-regular">
+            @font-face {
+                font-family: "preview_neue-machina-collection-regular";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPNeueMachina-InktrapRegular.woff?v=94093630506073623461652789099") format("woff");
+            }
+        </style><style data-name="font-face_preview_fragment-glare-regular">
+            @font-face {
+                font-family: "preview_fragment-glare-regular";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPFragment-GlareRegular.woff?v=169381596555285477591680612192") format("woff");
+            }
+        </style><style data-name="font-face_preview_writer-book">
+            @font-face {
+                font-family: "preview_writer-book";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPWriter-Ultralight.woff?v=23630151852283412921663675391") format("woff");
+            }
+        </style><style data-name="font-face_preview_mori-Regular">
+            @font-face {
+                font-family: "preview_mori-Regular";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPMori-Regular.woff?v=67187122880011220361650291605") format("woff");
+            }
+        </style><style data-name="font-face_preview_right-slab-medium">
+            @font-face {
+                font-family: "preview_right-slab-medium";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PP%20Right%20Slab%20-%20Regular.woff?v=49465384248129735891668806827") format("woff");
+            }
+        </style><style data-name="font-face_preview_right-didone-medium">
+            @font-face {
+                font-family: "preview_right-didone-medium";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PP%20Right%20Didone%20-%20Medium.woff?v=51078320478336269511668806927") format("woff");
+            }
+        </style><style data-name="font-face_preview_telegraf-regular">
+            @font-face {
+                font-family: "preview_telegraf-regular";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPTelegraf-Regular.woff?v=40612549650330146891673963252") format("woff");
+            }
+        </style><style data-name="font-face_preview_right-sans-medium">
+            @font-face {
+                font-family: "preview_right-sans-medium";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPRightSans-Medium.woff?v=48232260037999330521647623980") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppfraktionmono-regular">
+            @font-face {
+                font-family: "preview_ppfraktionmono-regular";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPFraktionMono-Regular.woff?v=77514694890973026961624485085") format("woff");
+            }
+        </style><style data-name="font-face_preview_pprightslab-medium">
+            @font-face {
+                font-family: "preview_pprightslab-medium";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPRightSlab-Medium.woff?v=14491603322088205341670941904") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppneuemachina-inktrapregular">
+            @font-face {
+                font-family: "preview_ppneuemachina-inktrapregular";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPNeueMachina-InktrapRegular.woff?v=94093630506073623461652789099") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppfragment-glareregular">
+            @font-face {
+                font-family: "preview_ppfragment-glareregular";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPFragment-GlareRegular.woff?v=169381596555285477591680612192") format("woff");
+            }
+        </style><style data-name="font-face_preview_pprightserif-medium">
+            @font-face {
+                font-family: "preview_pprightserif-medium";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPRightSerif-Medium.woff?v=64606545584787087001670941943") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppformula-narrowregular">
+            @font-face {
+                font-family: "preview_ppformula-narrowregular";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPFormula-NarrowRegular.woff?v=147832386674796250431646669962") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppobjectsans-light">
+            @font-face {
+                font-family: "preview_ppobjectsans-light";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPObjectSans-Light.woff?v=81613872045370192371624308467") format("woff");
+            }
+        </style><style data-name="font-face_preview_pppiersans-regular">
+            @font-face {
+                font-family: "preview_pppiersans-regular";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPPierSans-Regular.woff?v=165976500998249852721630354992") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppeditorialold-lightitalic">
+            @font-face {
+                font-family: "preview_ppeditorialold-lightitalic";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPEditorialOld-LightItalic.woff?v=43892641468580326521678141322") format("woff");
+            }
+        </style><style data-name="font-face_preview_pprader-light">
+            @font-face {
+                font-family: "preview_pprader-light";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPRader-Light.woff?v=176217386478503134871643052010") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppwriter-thin">
+            @font-face {
+                font-family: "preview_ppwriter-thin";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPWriter-Thin.woff?v=168778906737173938721663675371") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppacma-light">
+            @font-face {
+                font-family: "preview_ppacma-light";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPAcma-Light.woff?v=72702021297549173491674140889") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppmori-regular">
+            @font-face {
+                font-family: "preview_ppmori-regular";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPMori-Regular.woff?v=67187122880011220361650291605") format("woff");
+            }
+        </style><style data-name="font-face_preview_pprightgothic-medium">
+            @font-face {
+                font-family: "preview_pprightgothic-medium";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPRightGothic-Medium.woff?v=160110820981467670211634317869") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppneuemontreal-book">
+            @font-face {
+                font-family: "preview_ppneuemontreal-book";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPNeueMontreal-Book.woff?v=68282321310470500161632272263") format("woff");
+            }
+        </style><style data-name="font-face_preview_pppangramsans-compactmedium">
+            @font-face {
+                font-family: "preview_pppangramsans-compactmedium";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPPangramSans-CompactMedium.woff?v=2128244853225631571618506000") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppeditorialnew-light">
+            @font-face {
+                font-family: "preview_ppeditorialnew-light";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPEditorialNew-Light.woff?v=98451368185129732171619057364") format("woff");
+            }
+        </style><style data-name="font-face_preview_pppangramsansrounded-slimmedium">
+            @font-face {
+                font-family: "preview_pppangramsansrounded-slimmedium";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPPangramSansRounded-SlimMedium.woff?v=117905254463108940861624643754") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppcharlevoix-light">
+            @font-face {
+                font-family: "preview_ppcharlevoix-light";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPCharlevoix-Light.woff?v=109610977962323261311630355401") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppstellar-light">
+            @font-face {
+                font-family: "preview_ppstellar-light";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPStellar-Light.woff?v=16003272772619768851624300936") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppfuji-medium">
+            @font-face {
+                font-family: "preview_ppfuji-medium";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPFuji-Medium.woff?v=124917888558977924851624297497") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppcasa-regular">
+            @font-face {
+                font-family: "preview_ppcasa-regular";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPCasa-Regular.woff?v=158259708091779580851623962801") format("woff");
+            }
+        </style><style data-name="font-face_preview_pprightdidone-medium">
+            @font-face {
+                font-family: "preview_pprightdidone-medium";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPRightDidone-Medium.woff?v=51078320478336269511670941931") format("woff");
+            }
+        </style><style data-name="font-face_preview_pprightsans-widemedium">
+            @font-face {
+                font-family: "preview_pprightsans-widemedium";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPRightSans-WideMedium.woff?v=63428548569476708271647623790") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppmondwest-bold">
+            @font-face {
+                font-family: "preview_ppmondwest-bold";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPMondwest-Bold.woff?v=117690168698756929231624502621") format("woff");
+            }
+        </style><style data-name="font-face_preview_pptelegraf-light">
+            @font-face {
+                font-family: "preview_pptelegraf-light";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPTelegraf-Light.woff?v=4967801614078287271673963256") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppneueworld-semicondensedlight">
+            @font-face {
+                font-family: "preview_ppneueworld-semicondensedlight";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPNeueWorld-SemiCondensedLight.woff?v=107901976747285757481654525003") format("woff");
+            }
+        </style><style data-name="font-face_preview_pprightgrotesk-compactbold">
+            @font-face {
+                font-family: "preview_pprightgrotesk-compactbold";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPRightGrotesk-CompactBold.woff?v=58307693275388090051624460387") format("woff");
+            }
+        </style><style data-name="font-face_preview_pphatton-regular">
+            @font-face {
+                font-family: "preview_pphatton-regular";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPHatton-Regular.woff?v=17914648618059047881618881895") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppmonumentextended-regular">
+            @font-face {
+                font-family: "preview_ppmonumentextended-regular";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPMonumentExtended-Regular.woff?v=81693901422891830231658415988") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppagrandir-grandmedium">
+            @font-face {
+                font-family: "preview_ppagrandir-grandmedium";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPAgrandir-GrandMedium.woff?v=112419359884645449681624548892") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppwoodland-light">
+            @font-face {
+                font-family: "preview_ppwoodland-light";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPWoodland-Light.woff?v=161071325700105153061613662869") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppgatwick-medium">
+            @font-face {
+                font-family: "preview_ppgatwick-medium";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPGatwick-Medium.woff?v=143739507137133571481623943154") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppsupplysans-light">
+            @font-face {
+                font-family: "preview_ppsupplysans-light";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPSupplySans-Light.woff?v=90929501271319282271637682253") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppradiogrotesk-regular">
+            @font-face {
+                font-family: "preview_ppradiogrotesk-regular";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPRadioGrotesk-Regular.woff?v=1276532186026998901653330785") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppgrafier-bolddisplay">
+            @font-face {
+                font-family: "preview_ppgrafier-bolddisplay";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPGrafier-BoldDisplay.woff?v=19909294598919474271624307724") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppgoshasans-regular">
+            @font-face {
+                font-family: "preview_ppgoshasans-regular";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPGoshaSans-Regular.woff?v=26684406182402203031637954900") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppchronosserif-filled">
+            @font-face {
+                font-family: "preview_ppchronosserif-filled";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPChronosSerif-Filled.woff?v=164039190361657733701623967462") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppeiko-light">
+            @font-face {
+                font-family: "preview_ppeiko-light";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPEiko-Light.woff?v=37763251632726490021635862023") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppmigra-medium">
+            @font-face {
+                font-family: "preview_ppmigra-medium";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPMigra-Medium.woff?v=14402038135395066891624886406") format("woff");
+            }
+        </style><style data-name="font-face_preview_ppcirka-light">
+            @font-face {
+                font-family: "preview_ppcirka-light";
+                src:url("//cdn.shopify.com/s/files/1/2642/6578/t/28/assets/PPCirka-Light.woff?v=81098913243616894931623962169") format("woff");
+            }
+        </style>
+
+
+
+
+
+
+</head>
+<body>
+    
+
+
+        <div class="carousel-container">
+            <div id="gallery-container">
+              <!--  <span class="see-all">See All</span>-->
+                </div>
+            </div>
+            <div class="carousel">
+                <div id="header">
+                    <div id="a3">
+                    <a href="#" class="a1">Pangram Pangram●Foundry</a>
+                    <p class="a2"> <span class="light">🅐 Light Mode</span> </p>
+                    <a href="#" class="a1">All Fonts</a>
+                    <a href="#" class="a3">Font Starter Pack</a>
+                    <a href="#" class="a1">Cart</a>
+                    </div></div>
+            <div class="slider">
+                <section > <img class="carousel-img" src="https://cdn.shopify.com/s/files/1/2642/6578/t/28/assets/Homepage-OffType.jpg?v=71331014463972640541684944315" alt=""></section>
+                <section ><img  class="carousel-img"  src="https://cdn.shopify.com/s/files/1/2642/6578/t/28/assets/Header-Fragment.jpg?v=108924954602691418591680613809" alt=""></section>
+                <section > <img  class="carousel-img" src="https://cdn.shopify.com/s/files/1/2642/6578/t/28/assets/Header-EditorialOld.jpg?v=85360777188182687641678142091" alt=""></section>
+                <section ><img  class="carousel-img" src="https://cdn.shopify.com/s/files/1/2642/6578/t/28/assets/Header-TypeTrials.jpg?v=140312620541521886991675867719" alt=""> </section>
+                <section ><img  class="carousel-img" src="https://cdn.shopify.com/s/files/1/2642/6578/t/28/assets/Homepage-FSP.jpg?v=157059235392745552091668604712" alt=""> </section>
+            </div>
+            <div class="controls">
+                <span class="Arrow-left" style="display: hidden;" ><img src="Assets/Gallery/Arrow 2.png" alt=""></span>
+                <span class="Arrow-right" style="display: hidden;" ><img src="Assets/Gallery/Arrow 1.png" alt=""></span>
+           
+           
+            <ul class="indicator">
+                <li class="selected"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+             </div>
+        
+        </div>
+        
+        <div class="section-2">
+            <div class="line-1"></div>
+            <div class="aboutus"> ● About Us</div>
+        <div class="content-1"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  WE PROVIDE (TREND-CONSCIOUS) FREE TO TRY FONTS FOR DESIGNERS → EACH TYPEFACE, EVERY GLYPH IS CRAFTED WITH GREAT CARE AND ATTENTION TO DETAILS FOR YOUR EVERYDAY DESIGNS ● BY THE WAY, ALL OUR FONTS ARE STARTING AT $30.</div>
+        <div class="content-2">New to our fonts? Be sure to check out our Font Starter Pack. You get 27 typefaces with a total of 144 weights ● That’s 60 extra weights that are not available to try with the regular trial downloads including versatile poster mockups.</div>
+        <div style="display: flex; flex-direction: row; margin-left: 28%;" ><div class="about-us-cards">More About Us <div> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; <i class="fa-solid fa-arrow-right fa-beat"></i></div></div>
+        <div class="about-us-cards">Font Starter Pack <div> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; <i class="fa-solid fa-arrow-right fa-beat"></i></div></div></div>
+        <div style="display: flex; flex-direction: row; background-color: #1c1c1c; margin-left: 30%;" ><div class="line2"></div> <div class="line3"></div> </div>
+    </div>
+    <div class="section-3">
+        <div class="showing">Showing 11 of 41 font families</div>
+        <div class="line-4"></div>
+        
+        <div class="row-1" style="display: flex;">
+            <div class="font-card-1-row-1">
+                <div class="tophover">
+                    The cajoling quirked sexy wizard mob persuade very influentially.</div>
+                <div class="top" >Aa</div>
+                <div class="bottom">Editorial old <br>16 Styles + Variable Cut  &emsp; &emsp; &emsp;&emsp; &emsp; &emsp; <i class="fa-solid fa-arrow-right fa-beat"></i></br>Including Italics </div>
+            
+            </div>
+    
+            <div class="font-card-1-row-1">
+                <div class="tophover">
+                    The cajoling quirked sexy wizard mob persuade very influentially.</div>
+                <div class="top" >Aa</div>
+                <div class="bottom">Editorial old <br>16 Styles + Variable Cut  &emsp; &emsp; &emsp;&emsp; &emsp; &emsp; <i class="fa-solid fa-arrow-right fa-beat"></i></br>Including Italics </div>
+            </div>
+
+            <div class="font-card-1-row-1">
+                <div class="tophover">
+                    The cajoling quirked sexy wizard mob persuade very influentially.</div>
+                <div class="top" >Aa</div>
+                <div class="bottom">Editorial old <br>16 Styles + Variable Cut  &emsp; &emsp; &emsp;&emsp; &emsp; &emsp; <i class="fa-solid fa-arrow-right fa-beat"></i></br>Including Italics </div>
+            </div>
+
+            <div class="font-card-1-row-1">
+                <div class="tophover">
+                    The cajoling quirked sexy wizard mob persuade very influentially.</div>
+                <div class="top" >Aa</div>
+                <div class="bottom">Editorial old <br>16 Styles + Variable Cut  &emsp; &emsp; &emsp;&emsp; &emsp; &emsp; <i class="fa-solid fa-arrow-right fa-beat"></i></br>Including Italics </div>
+            </div>
+
+    </div>
+
+    <div style="display: flex; flex-direction: row; margin-left: 35%; margin-top: 2%; " ><div class="about-us-cards">See All Fonts In Use <div> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; <i class="fa-solid fa-arrow-right fa-beat"></i></div></div>
+</div></div></div>
+<div style="display: flex; flex-direction: row; background-color: #1c1c1c; margin-left: 30%; margin-bottom: 10%;" ><div class="line5"></div>  </div>
+
+    <div class="section-4">
+        <div class="line-1"></div>
+        <div class="aboutus">● Font in use</div> 
+
+        <div class="s4t1">
+            &emsp; &emsp; &emsp;&emsp; HERE ARE SOME BEAUTIFUL PROJECTS USING OUR FONTS ● YOU CAN GO CHECK OUT OUR FONT IN USE SECTION AND DON'T FORGET TO SEND US YOUR PROJECTS USING OUR FONTS TO GET FEATURED.
+        </div>
+        <div class="imageline-1">
+            <img src="https://cdn.shopify.com/s/files/1/2642/6578/articles/1_1361316f-4da7-45d7-b24d-10d0d9ec8932_1920x.jpg?v=1685650273" alt="" height="90%" width="60%" style="margin: 3%;">
+            <img src="https://cdn.shopify.com/s/files/1/2642/6578/articles/A_960x.jpg?v=1684347328" alt="" height="50%" width="30%" style="margin-bottom: 3%;">
+            <img src="https://cdn.shopify.com/s/files/1/2642/6578/articles/COVER_aa25ccac-eb36-479b-8f37-b3325aa9cbf3_960x.png?v=1683571220" alt="" height="50%" width="30%" style="margin: 2%;">
+            <img src="https://cdn.shopify.com/s/files/1/2642/6578/articles/COVER_5f423d57-efe2-40a0-92b0-54eec34a9253_960x.jpg?v=1682966436" alt="" height="50%" width="30%" style="margin: 2%;">
+            <img src="https://cdn.shopify.com/s/files/1/2642/6578/articles/COVER_2165d3be-64ac-4e22-adc2-d3ffca7ba8e2_960x.png?v=1681326066" alt="" height="50%" width="25%" style="margin: 2%;">
+            <div style="display: flex; flex-direction: row; margin-left: 35%; margin-top: 5%;" ><div class="about-us-cards">See All Fonts In Use <div> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; <i class="fa-solid fa-arrow-right fa-beat"></i></div></div>
+        </div></div></div>
+        <div style="display: flex; flex-direction: row; background-color: #1c1c1c; margin-left: 30%; margin-bottom: 10%;" ><div class="line5"></div>  </div>
+    </div>
+        </div>
+    </div>
+    <div class="line-1"></div>
+        <div class="aboutus">● The Pangram Paper <br> <br> <br> <br> </div> 
+
+        <div class="imageline-2">
+            <img src="https://cdn.shopify.com/s/files/1/2642/6578/articles/reiss_1_960x.jpg?v=1685126297" alt="" height="50%" width="30%" style="margin: 2%;" >
+            <img src="https://cdn.shopify.com/s/files/1/2642/6578/articles/art_buying_washington_post_final_960x.jpg?v=1684941792" alt="" height="50%" width="30%" style="margin: 2%;" >
+            <img src="https://cdn.shopify.com/s/files/1/2642/6578/articles/OT-cover_960x.jpg?v=1684328493" alt="" height="50%" width="25%" style="margin: 2%;" >
+            <div style="display: flex; flex-direction: row; margin-left: 35%; margin-top: 5%;" ><div class="about-us-cards">See All Articles <div> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; <i class="fa-solid fa-arrow-right fa-beat"></i></div></div>
+        </div></div></div>
+        <div style="display: flex; flex-direction: row; background-color: #1c1c1c; margin-left: 30%; margin-bottom: 10%;" ><div class="line6"></div>  </div>
+        </div>
+        <div class="footer">
+            <div class="footer-1">
+                <div class="subscribe">Subscribe to our newsletter to stay in touch with the latest.
+                    <br> <br>
+                    
+                </div>
+                <div class="menu">
+                    <span style="color: #1c1c1c; opacity: 0.5;">Menu <br> <br></span> 
+                    <li>All Fonts  </li>
+                    <li>Font starter Pack </li>
+                    <li>The Pangram Paper</li>
+                    <li>Font in Use</li>
+                    <li>About</li>
+                    <li>Studio Shop</li>
+                    <li>Lab</li>
+                    <li>Cart</li>
+                </div>
+                <div class="support">
+                    <span style="color: #1c1c1c; opacity: 0.5;">  Support <br> <br></span>
+                    <li>FAQs</li>
+                    <li>EULA</li>
+                    <li>Font Licenses</li>
+                    <li>Contact</li>
+                    <li>Account Log in</li>
+                </div>
+            </div>
+            
+        </div>
+        <div class="availablefonts">
+        <div class="line-7"></div>
+        <div class="availablefonts-1">● Available Fonts <br> <br> <br> <br> </div>
+        <div class="menu-1"> 
+            <div>
+            <li class="f1">Editorial Old</li>
+            <li class="f2">Acma</li>
+            <li class="f3">Mori</li>
+            <li class="f4">Right Gothic</li>
+            <li class="f5">Nueue Montreal</li>
+            <li class="f6">Pangram Sans</li>
+            <li class="f7">Pangram Sans Rounded</li>
+            <li class="f8">Charlevoix Pro</li>
+            <li class="f9">Stellar Sans</li>
+            <li class="f10">Fuji Sans</li>
+            <li class="f11">Casa Stencil</li>
+            <span class="preview-1">Aa*1</span>
+            
+            </div>
+            
+            <div>
+                <li class="f12">Right Didone</li>
+                <li class="f13">Writer</li>
+                <li class="f14">Right Sans</li>
+                <li class="f15">Eiko</li>
+                <li class="f16">Bitmap Fonts</li>
+                <li class="f17">Telegraph</li>
+                <li class="f18">Pier Sans</li>
+                <li class="f19">Neue World</li>
+                <li class="f20">Right Grotex</li>
+                <li class="f21">Hatton</li>
+                <span class="preview-2">Aa*1</span>
+                
+                </div>
+                <div>
+                    <li class="f22">Right Serif</li>
+                    <li class="f23">Fragment</li>
+                    <li class="f24">Formula</li>
+                    <li class="f25">Editorial New</li>
+                    <li class="f26">Object Sans</li>
+                    <li class="f27">Cirka</li>
+                    <li class="f28">Migra</li>
+                    <li class="f29">Monument Extended</li>
+                    <li class="f30">Agrandir</li>
+                    <li class="f31">Woodland</li>
+                    <span class="preview-3">Aa*1</span>
+                    
+                    </div>
+                    <div>
+                        <li class="f32">Right Slab</li>
+                        <li class="f33">Neue Machina</li>
+                        <li class="f34">Rader</li>
+                        <li class="f35">Fraktion</li>
+                        <li class="f36">Supply</li>
+                        <li class="f37">Radio Grotesk</li>
+                        <li class="f38">Gatwick</li>
+                        <li class="f39">Grafier</li>
+                        <li class="f40">Gosha Sans</li>
+                        <li class="f41">Chronos serif</li>
+                        <span class="preview-4">Aa*1</span>
+                        
+                        </div>
+        </div>
+        
+        </div>
+</body>
+<script src="gallery.js"></script>
+</html>
