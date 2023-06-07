@@ -9,7 +9,6 @@ var index=0;
 
 
 leftarrow.addEventListener('click',function(){
-    document.getElementById('Fragment').style.position='absolute';
     index=(index>0)? index-1 :0;
     document.querySelector('.controls .selected').classList.remove('selected');
     indicatorP.children[index].classList.add('selected');

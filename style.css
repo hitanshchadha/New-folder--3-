@@ -159,31 +159,7 @@ body{
 		
 	}
 }
-#Fragment{
-    color:rgb(255, 61, 0);
-    position: relative;
-    font-family: "brut";
-    font-size: 12.5rem;
-    animation: Fragment 2s ease 0s 1 normal forwards;
-    right: 209px;
-    top: 494px;
-    font-weight: 500;
-    
-}
 
-@keyframes Fragment {
-	0% {
-		opacity: 0;
-        transform: translateY(100px);
-		
-	}
-
-	100% {
-		opacity: 1;
-        transform: translateY(0px);
-		
-	}
-}
 .section-2{
     background-color:#1c1c1c;
     margin-top: 0%;
