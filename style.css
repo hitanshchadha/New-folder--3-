@@ -160,6 +160,62 @@ body{
 	}
 }
 
+
+#Fragment{
+    color:rgb(255, 61, 0);
+    position: absolute;
+    font-family: "brut";
+    font-size: 12.5rem;
+    animation: Fragment 2s ease 0s 1 normal forwards;
+    right: -909px;
+    top: 494px;
+    font-weight: 500;
+    display: none;
+    
+}
+
+@keyframes Fragment {
+	0% {
+		opacity: 0;
+        transform: translateY(100px);
+		
+	}
+
+	100% {
+		opacity: 1;
+        transform: translateY(0px);
+		
+	}
+}
+
+#Hi{
+    color:rgb(255, 61, 0);
+    position: absolute;
+    font-family: "brut";
+    font-size: 12.5rem;
+    animation: Hi 2s ease 0s 1 normal forwards;
+    right: -2009px;
+    top: 494px;
+    font-weight: 500;
+    display: none;
+    
+}
+
+@keyframes Hi {
+	0% {
+		opacity: 0;
+        transform: translateY(100px);
+		
+	}
+
+	100% {
+		opacity: 1;
+        transform: translateY(0px);
+		
+	}
+}
+
+
 .section-2{
     background-color:#1c1c1c;
     margin-top: 0%;
