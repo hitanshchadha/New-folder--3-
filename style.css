@@ -47,7 +47,9 @@ body{
     position: fixed;
     width: 100%;
     z-index: 1;
+    
 }
+
 .a2{
     margin-left: 16%;
     margin-right: 28%;
@@ -64,7 +66,7 @@ body{
     position: absolute;
     font-family: "brut";
     font-size: 12.5rem;
-    animation: weirdly 2s ease 0s 1 normal forwards;
+    
     left: 150px;
     top: 36px;
     font-weight: 500;
@@ -78,6 +80,19 @@ body{
 	}
 
 	100% {
+		opacity: 1;
+        transform: translateY(0px);
+		
+	}
+}
+@keyframes weirdly-close {
+	100% {
+		opacity: 0;
+        transform: translateY(100px);
+		
+	}
+
+	0% {
 		opacity: 1;
         transform: translateY(0px);
 		
@@ -104,6 +119,19 @@ body{
 	}
 
 	100% {
+		opacity: 1;
+        transform: translateY(0px);
+		
+	}
+}
+@keyframes Off-close {
+	100% {
+		opacity: 0;
+        transform: translateY(100px);
+		
+	}
+
+	0% {
 		opacity: 1;
         transform: translateY(0px);
 		
@@ -297,6 +325,47 @@ body{
 	}
 
 	100% {
+		opacity: 1;
+        transform: translateY(0px);
+		
+	}
+}
+
+@keyframes menu {
+    0% {
+        top: -50%;
+
+        
+        
+    }
+
+    100% {
+        
+        top: 0%;
+        
+    }}
+    @keyframes menu-close {
+        100% {
+            top: -70%;
+    
+            
+            
+        }
+    
+        0% {
+            
+            top: 0%;
+            
+        }   
+}
+@keyframes Editorial-close {
+	100% {
+		opacity: 0;
+        transform: translateY(100px);
+		
+	}
+
+	0% {
 		opacity: 1;
         transform: translateY(0px);
 		
@@ -557,6 +626,23 @@ body{
     
 }
 .about-us-cards:hover{
+    .line2{animation: line2 4s linear infinite;
+}
+
+@keyframes line2 {
+    0% {
+       opacity: 1;
+        
+        
+    }
+    20%{
+        opacity: 0.8;
+    }
+    40%{
+        opacity: 1;
+    }
+}}
+.about-us-cards:hover{
     opacity: .5;
 }
 .line3{
@@ -622,7 +708,7 @@ body{
 
 @keyframes font-card-2-row-1 {
   to {
-    transform: translateY(400px);
+    transform: translateY(500px);
   }
 }
     
@@ -827,15 +913,14 @@ nav {
    
 
   }
-  nav .mainMenu li a:hover {
-    background: rgb(255, 94, 0);
-  }
   nav .openMenu {
     font-size: 2rem;
     margin: 20px;
     display: none;
     cursor: pointer;
     color: aliceblue;
+    transition: top 1s ease 0s;
+
   }
   nav .mainMenu .closeMenu,
   .icons i {
@@ -861,8 +946,8 @@ nav {
       justify-content: left;
       align-items: start;
       background: white;
-      transition: top 1s ease 0s;
       display: none;
+      
     }
     nav .mainMenu2 {
         height: 85vh;
@@ -888,10 +973,7 @@ nav {
     nav .openMenu {
       display: block;
     }
-    nav .mainMenu li a:hover {
-      background: none;
-      color: rgb(255, 123, 0);
-    }
+
     
   
   
@@ -1241,26 +1323,3 @@ li:hover{
     
 }
 
-
-
-
-.bitsfinal{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-items: center;
-    flex-direction: column;
-}
-#bits{
-    
-    height: 10%;
-    width: 10%;
-    
-}
-.final{
-    color: blue;
-    font-size: 2rem;
-    font-family: cursive;
-    background-color: #1c1c1c;
-    
-}

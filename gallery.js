@@ -15,14 +15,14 @@ leftarrow.addEventListener('click',function(){
     index=(index>0)? index-1 :0;
     document.querySelector('.controls .selected').classList.remove('selected');
     indicatorP.children[index].classList.add('selected');
-    slider.style.transform= 'translate('+ (index) * -99.88 + '%)';
+    slider.style.transform= 'translate('+ (index) * -101 + '%)';
     
      });
 rightarrow.addEventListener('click',function(){
     index=(index<3)? index+1: 3;
     document.querySelector('.controls .selected').classList.remove('selected');
     indicatorP.children[index].classList.add('selected');
-    slider.style.transform= 'translate('+ (index) * -99.88 + '%)';
+    slider.style.transform= 'translate('+ (index) * -101 + '%)';
     
     });
 
@@ -31,88 +31,134 @@ document.querySelectorAll('.controls li').forEach(function(indicator,ind){
         index=ind;
         document.querySelector('.controls .selected').classList.remove('selected');
         indicator.classList.add('selected');
-        slider.style.transform= 'translate('+ (index) * -99.88 + '%)';
+        slider.style.transform= 'translate('+ (index) * -101 + '%)';
+        if (ind==0) {
+            
+            let w= document.getElementById('weirdly');
+            w.style.display='flex';
+            w.style.animation= 'Editorial 2s ease 0s 1 normal forwards';
+
+            let off= document.getElementById('Off');
+        off.style.display='flex';
+        off.style.animation= 'Editorial 2s ease 0s 1 normal forwards';
+
+            let b= document.getElementById('Beat');
+            b.style.display='flex';
+            b.style.animation= 'Editorial 2s ease 0s 1 normal forwards';
+
+            let font= document.getElementById('Fonts');
+            font.style.display='flex';
+        font.style.animation= 'Editorial 2s ease 0s 1 normal forwards';
+        }
+        
+        
         if (ind==1) {
-            
-            
+            let w= document.getElementById('weirdly');
+            w.style.animation= 'weirdly-close 2s ease 0s 1 normal forwards';
+
+            let off= document.getElementById('Off');
+            off.style.animation= 'Off-close 2s ease 0s 1 normal forwards';
+
+            let b= document.getElementById('Beat');
+            b.style.animation= 'weirdly-close 2s ease 0s 1 normal forwards';
+
+            let font= document.getElementById('Fonts');
+            font.style.animation= 'weirdly-close 2s ease 0s 1 normal forwards';
+        
             let f= document.getElementById('Fragment');
             f.style.display='flex';
+            f.style.animation= 'Editorial 2s ease 0s 1 normal forwards';
 
             let t= document.getElementById('two');
             t.style.display='flex';
+            t.style.animation= 'Editorial 2s ease 0s 1 normal forwards';
+
 
             let h= document.getElementById('has');
             h.style.display='flex';
+            h.style.animation= 'Editorial 2s ease 0s 1 normal forwards';
+
 
             let i= document.getElementById('italics');
             i.style.display='flex';
+            i.style.animation= 'Editorial 2s ease 0s 1 normal forwards';
+
             
         }
          if (ind==2 || ind==0) {
             let f= document.getElementById('Fragment');
-            f.style.display='none';
+            f.style.animation= 'Editorial-close 2s ease 0s 1 normal forwards';
             
             let t= document.getElementById('two');
-            t.style.display='none';
+            t.style.animation= 'Editorial-close 2s ease 0s 1 normal forwards';
 
             let h= document.getElementById('has');
-            h.style.display='none';
+            h.style.animation= 'Editorial-close 2s ease 0s 1 normal forwards';
 
             let i= document.getElementById('italics');
-            i.style.display='none';
+            i.style.animation= 'Editorial-close 2s ease 0s 1 normal forwards';
             
             
             
             let e= document.getElementById('Editorial');
             e.style.display='flex';
+            e.style.animation= 'Editorial 2s ease 0s 1 normal forwards';
 
             let o= document.getElementById('old');
             o.style.display='flex';
+            o.style.animation= 'Editorial 2s ease 0s 1 normal forwards';
 
             let fi= document.getElementById('firko');
             fi.style.display='flex';
+            fi.style.animation= 'Editorial 2s ease 0s 1 normal forwards';
 
             let l= document.getElementById('lab');
             l.style.display='flex';
+            l.style.animation= 'Editorial 2s ease 0s 1 normal forwards';
             
         }
         if(ind==3 || ind==1){
             let e= document.getElementById('Editorial');
-            e.style.display='none';
+            e.style.animation= 'Editorial-close 2s ease 0s 1 normal forwards';
 
             let o= document.getElementById('old');
-            o.style.display='none';
+            o.style.animation= 'Editorial-close 2s ease 0s 1 normal forwards';
 
             let fi= document.getElementById('firko');
-            fi.style.display='none';
+            fi.style.animation= 'Editorial-close 2s ease 0s 1 normal forwards';
 
             let l= document.getElementById('lab');
-            l.style.display='none';
+            l.style.animation= 'Editorial-close 2s ease 0s 1 normal forwards';
 
             let te= document.getElementById('Test');
             te.style.display='flex';
+            te.style.animation= 'Editorial 2s ease 0s 1 normal forwards';
+
 
             let yo= document.getElementById('Your');
             yo.style.display='flex';
+            yo.style.animation= 'Editorial 2s ease 0s 1 normal forwards';
 
             let fo= document.getElementById('Font');
             fo.style.display='flex';
+            fo.style.animation= 'Editorial 2s ease 0s 1 normal forwards';
 
             let he= document.getElementById('Here');
             he.style.display='flex';
+            he.style.animation= 'Editorial 2s ease 0s 1 normal forwards';
         }
         if (ind==4 || ind==2) {
             let te= document.getElementById('Test');
-            te.style.display='none';
+            te.style.animation= 'Editorial-close 2s ease 0s 1 normal forwards';
 
             let yo= document.getElementById('Your');
-            yo.style.display='none';
+            yo.style.animation= 'Editorial-close 2s ease 0s 1 normal forwards';
 
             let fo= document.getElementById('Font');
-            fo.style.display='none';
+            fo.style.animation= 'Editorial-close 2s ease 0s 1 normal forwards';
 
             let he= document.getElementById('Here');
-            he.style.display='none';
+            he.style.animation= 'Editorial-close 2s ease 0s 1 normal forwards';
         }
         });
     });    
@@ -138,7 +184,6 @@ const mainMenu2 = document.querySelector('.mainMenu2');
 openMenu.addEventListener('click',show);
 closeMenu.addEventListener('click',close);
 
-// close menu when you click on a menu item 
 menu_items.forEach(item => {
     item.addEventListener('click',function(){
         close();
@@ -147,12 +192,14 @@ menu_items.forEach(item => {
 
 function show(){
     mainMenu.style.display = 'flex';
+    mainMenu.style.animation= 'menu 2s ease 0s 1 normal forwards';
     mainMenu.style.top = '0';
     mainMenu2.style.display = 'flex';
     mainMenu2.style.top = '0';
 }
 function close(){
     mainMenu.style.top = '-110%';
+    mainMenu.style.animation= 'menu-close 2s ease 0s 1 normal forwards';
     mainMenu2.style.top = '-110%';
 }
 
@@ -162,8 +209,11 @@ window.addEventListener(
     () => {
       document.body.style.setProperty(
         "--scroll",
-        window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+        window.scrollY / (document.body.offsetHeight - window.innerHeight)
       );
     },
     false
   );
+
+
+  
