@@ -1098,11 +1098,12 @@ li:hover{
 
 .preview-1{
     font-size: 10rem;
+    bottom: -805%;
     display: none;
     justify-content: end;
     position: absolute;
     left: 72%;
-    top: 770%;
+    
 }
 .preview-2{
     font-size: 10rem;
@@ -1110,7 +1111,7 @@ li:hover{
     justify-content: end;
     position: absolute;
     left: 72%;
-    top: 770%;
+    bottom: -805%;
 }
 .preview-3{
     font-size: 10rem;
@@ -1118,7 +1119,7 @@ li:hover{
     justify-content: end;
     position: absolute;
     left: 72%;
-    top: 770%;
+     bottom: -805%;
 }
 .preview-4{
     font-size: 10rem;
@@ -1126,7 +1127,7 @@ li:hover{
     justify-content: end;
     position: absolute;
     left: 72%;
-    top: 770%;
+    bottom: -805%;
 }
 .f1:hover ~ .preview-1{
     display: flex;
